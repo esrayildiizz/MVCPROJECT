@@ -9,7 +9,7 @@ namespace EntityLayer.Concrete
 {
      public class About
     {
-        [Key]
+        [Key] //Id için birincil anahtar eklendi.
         public int AboutID { get; set; }
 
         [StringLength(1000)]
