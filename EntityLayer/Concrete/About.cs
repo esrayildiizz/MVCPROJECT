@@ -12,7 +12,7 @@ namespace EntityLayer.Concrete
         [Key] //Id için birincil anahtar eklendi.
         public int AboutID { get; set; }
 
-        [StringLength(1000)]
+        [StringLength(1000)] //Karakter uzunluğu belirleme.
         public string AboutDetails1{ get; set; }
 
         [StringLength(1000)]
