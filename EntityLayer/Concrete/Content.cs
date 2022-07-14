@@ -12,7 +12,7 @@ namespace EntityLayer.Concrete
         [Key] //Id için birincil anahtar eklendi.
         public int ContentID { get; set; }
 
-        [StringLength(1000)]
+        [StringLength(1000)] //Karakter uzunluğu belirleme.
         public string ContentValue { get; set; }
         public DateTime ContentDate { get; set; }
 
