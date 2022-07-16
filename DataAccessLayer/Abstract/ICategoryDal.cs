@@ -14,5 +14,7 @@ namespace DataAccessLayer.Abstract
         List<Category> List(); //Listeleme islemi için.
 
         void Insert(Category p); // Ekleme islemi için.
+
+        void Update(Category p); //Guncelleme islemi için.
     }
 }
