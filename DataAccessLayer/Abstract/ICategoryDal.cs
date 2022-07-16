@@ -16,5 +16,7 @@ namespace DataAccessLayer.Abstract
         void Insert(Category p); // Ekleme islemi için.
 
         void Update(Category p); //Guncelleme islemi için.
+
+        void Delete(Category p); //Silme islemi için.
     }
 }
