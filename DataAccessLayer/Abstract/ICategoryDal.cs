@@ -13,6 +13,6 @@ namespace DataAccessLayer.Abstract
         //Type Name ();
         List<Category> List(); //Listeleme islemi için.
 
-        
+        void Insert(Category p); // Ekleme islemi için.
     }
 }
