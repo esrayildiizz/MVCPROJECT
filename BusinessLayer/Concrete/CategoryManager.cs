@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete.Repositories;
 using EntityLayer.Concrete;
 using System;
@@ -11,6 +12,14 @@ namespace BusinessLayer.Concrete
 {
     public class CategoryManager : ICategoryService
     {
+        ICategoryDal _categoryDal;
+
+        public CategoryManager(ICategoryDal categoryDal)
+        {
+            _categoryDal = categoryDal;
+        }
+
+
 
 
         // GenericRepository<Category> repo = new GenericRepository<Category>();
@@ -34,7 +43,7 @@ namespace BusinessLayer.Concrete
         //}
         public List<Category> GetList()
         {
-            throw new NotImplementedException();
+            return 
         }
     }
 }
