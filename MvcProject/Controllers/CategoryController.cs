@@ -19,8 +19,8 @@ namespace MvcProject.Controllers
 
         public ActionResult GetCategoryList()
         {
-            var categoryvalues = cm.GetAllBL();
-            return View(categoryvalues);
+            // var categoryvalues = cm.GetAllBL();
+            return View();
         }
 
 
@@ -33,7 +33,7 @@ namespace MvcProject.Controllers
         [HttpPost] //sayfamdaki herhangi bir butona bastığımda çalışır.
         public ActionResult AddCategory(Category p)
         {
-            cm.CategoryAddBL(p);
+            // cm.CategoryAddBL(p);
             return RedirectToAction("GetCategoryList");
         }
     }
