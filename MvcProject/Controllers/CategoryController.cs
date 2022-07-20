@@ -23,6 +23,14 @@ namespace MvcProject.Controllers
             return View(categoryvalues);
         }
 
+
+        [HttpGet] //sayfa yüklendiği zaman çalışır.
+        public ActionResult AddCategory()
+        {
+            return View();
+        }
+
+        [HttpPost] //sayfamdaki herhangi bir butona bastığımda çalışır.
         public ActionResult AddCategory(Category p)
         {
             cm.CategoryAddBL(p);
