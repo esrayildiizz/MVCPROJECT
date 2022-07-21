@@ -9,7 +9,9 @@ namespace EntityLayer.Concrete
 {
      public class Category
     {
-        [Key] //Id için birincil anahtar eklendi.
+        //Key ve StringLength burada belirtmemiz solid prensiplerini çiğnediğimiz anlamına gelir.ve bu yüzden validation'a ihtiyaç duyarız.
+
+        [Key] //Id için birincil anahtar eklendi. 
         public int CategoryID { get; set; }
 
         [StringLength(50)] //Karakter uzunluğu belirleme.
