@@ -14,7 +14,7 @@ namespace BusinessLayer.ValidationRules
         {
             //CategoryName boş olamaz.Ve bu mesaj önümüze gelir.
             RuleFor(x => x.CategoryName).NotEmpty().WithMessage("Kategori Adını Boş Geçemezsiniz.");
-
+            //CategoryDescription boş olamaz.Ve bu mesaj önümüze gelir.
             RuleFor(x => x.CategoryDescription).NotEmpty().WithMessage("Açıklama Alanını Boş Geçemezsiniz.");
 
             RuleFor(x => x.CategoryName).MinimumLength(3).WithMessage("Lütfen en az 3 karater girişi yapınız.");
