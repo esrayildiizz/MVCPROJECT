@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.ValidationRules
 {
-    public  class CategoryValidatior: AbstractValidator<Category>
+    public  class CategoryValidator: AbstractValidator<Category>
     {
-        public CategoryValidatior()
+        public CategoryValidator()
         {
             //CategoryName boş olamaz.Ve bu mesaj önümüze gelir.
             RuleFor(x => x.CategoryName).NotEmpty().WithMessage("Kategori Adını Boş Geçemezsiniz.");
