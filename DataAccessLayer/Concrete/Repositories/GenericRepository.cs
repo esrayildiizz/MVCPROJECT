@@ -28,6 +28,11 @@ namespace DataAccessLayer.Concrete.Repositories
             c.SaveChanges();
         }
 
+        public T Get(Expression<Func<T, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Insert(T p)
         {
             _object.Add(p); //void tanımladığımız için return kullanmadık.
