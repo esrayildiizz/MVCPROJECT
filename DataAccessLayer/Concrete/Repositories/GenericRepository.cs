@@ -30,7 +30,8 @@ namespace DataAccessLayer.Concrete.Repositories
 
         public T Get(Expression<Func<T, bool>> filter)
         {
-            throw new NotImplementedException();
+            return _object.SingleOrDefault(filter);
+            //Sadece bir değer döndürmek istediğimiz için yukarıdaki sorguyu yazdık.
         }
 
         public void Insert(T p)
