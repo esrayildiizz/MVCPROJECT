@@ -18,6 +18,8 @@ namespace MvcProject.Controllers
             return View(Writervalues);
             
         }
+
+        [HttpGet]
         public ActionResult AddWriter()
         {
             return View();
