@@ -42,7 +42,7 @@ namespace MvcProject.Controllers
             if (results.IsValid)
             {
                 cm.CategoryAdd(p);
-                return RedirectToAction("GetCategoryLis");
+                return RedirectToAction("GetCategoryList");
             }
             else
             {
