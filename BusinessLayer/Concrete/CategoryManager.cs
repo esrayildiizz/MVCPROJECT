@@ -41,7 +41,8 @@ namespace BusinessLayer.Concrete
 
         public List<Category> GetList()
         {
-            return _categoryDal.List();
+             return _categoryDal.List();
+
         }
     }
 }
