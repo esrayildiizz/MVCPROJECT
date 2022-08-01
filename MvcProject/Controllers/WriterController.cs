@@ -54,5 +54,13 @@ namespace MvcProject.Controllers
             var writervalue = wm.GetByID( id);
             return View(writervalue);
         }
+
+        [HttpPost]
+        public ActionResult EditWriter(Writer p)
+        {
+            wm.WriterUpdate(p);
+            return RedirectToAction("Index");
+
+        }
     }
 }
