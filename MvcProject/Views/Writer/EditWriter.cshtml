@@ -10,7 +10,7 @@
 <div class="form-group">
     @Html.Label("Yazar ID")
     @Html.TextBoxFor(x => x.WriterID, new { @class = "form-control" })
-    
+
     <br />
     @Html.Label("Yazar Soyadı")
     @Html.TextBoxFor(x => x.WriterSurname, new { @class = "form-control" })
@@ -28,10 +28,14 @@
     @Html.TextBoxFor(x => x.WriterImage, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.WriterImage)
     <br />
+    @Html.Label("Yazar Ünvan")
+    @Html.TextBoxFor(x => x.WriterTitle, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.WriterTitle)
+    <br />
     @Html.Label("Yazar Hakkında")
     @Html.TextBoxFor(x => x.WriterAbout, new { @class = "form-control" })
     @Html.ValidationMessageFor(x => x.WriterAbout)
     <br />
-    <button class="btn btn-info"> Değişiklikleri Uygula</button>
+    <button class="btn btn-success"> Değişiklikleri Uygula</button>
 </div>
 }
