@@ -49,12 +49,14 @@ namespace MvcProject.Controllers
             return View();
         }
 
+
         [HttpGet]
         public ActionResult EditWriter(int id)
         {
             var writervalue = wm.GetByID( id);
             return View(writervalue);
         }
+
 
         [HttpPost]
         public ActionResult EditWriter(Writer p)
