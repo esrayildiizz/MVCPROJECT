@@ -13,7 +13,8 @@ namespace BusinessLayer.Concrete
     {
         IHeadingDal _headingDal;
 
-        public HeadingManager(IHeadingDal headingDal)//yapıcı metot tanımladık.
+        public HeadingManager(IHeadingDal headingDal)
+            //yapıcı metot tanımladık.
         {
             _headingDal = headingDal;
         }
