@@ -21,27 +21,27 @@ namespace BusinessLayer.Concrete
 
         public Heading GetByID(int id)
         {
-            throw new NotImplementedException();
+            return _headingDal.Get(x => x.HeadingID == id);
         }
 
         public List<Heading> GetList()
         {
-            throw new NotImplementedException();
+            return _headingDal.List();
         }
 
         public void HeadingAdd(Heading heading)
         {
-            throw new NotImplementedException();
+            _headingDal.Insert(heading);
         }
 
         public void HeadingDelete(Heading heading)
         {
-            throw new NotImplementedException();
+            _headingDal.Delete(heading);
         }
 
         public void HeadingUpdate(Heading heading)
         {
-            throw new NotImplementedException();
+            _headingDal.Update(heading);
         }
     }
 }
