@@ -11,7 +11,7 @@ namespace MvcProject.Controllers
     public class HeadingController : Controller
     {
 
-        HeadingManager hm = new HeadingManager(new EfHeadingDal());
+        HeadingManager hm = new HeadingManager(new EfHeadingDal()); //hm adından bir nesne tanımladık.
         // GET: Heading
         public ActionResult Index()
         {
