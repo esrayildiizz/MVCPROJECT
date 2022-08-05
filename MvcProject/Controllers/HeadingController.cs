@@ -30,6 +30,7 @@ namespace MvcProject.Controllers
         [HttpPost]
         public ActionResult AddHeading(Heading p)
         {
+            p.HeadingDate = DateTime.Parse( DateTime.Now.ToShortDateString());
             hm.HeadingAdd(p);
             return RedirectToAction("Index");
         }
