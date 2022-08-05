@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Başlık Ekleme Sayfası</h2>
+<h2> Yeni Başlık Ekleme Sayfası</h2>
 <br />
 @using (Html.BeginForm("AddHeading", "Heading", FormMethod.Post))
 {
@@ -21,8 +21,8 @@
         @Html.TextBoxFor(x => x.WriterID, new { @class = "form-control" })
         @Html.ValidationMessageFor(x => x.WriterID)
         <br />
-)
-        <button class="btn btn-info"> Başlığı Oluştur</button>
+
+        <button class="btn btn-info">Başlığı Oluştur</button>
     </div>
 }
 
