@@ -14,6 +14,7 @@ namespace MvcProject.Controllers
 
         HeadingManager hm = new HeadingManager(new EfHeadingDal()); //hm adından bir nesne tanımladık.
         CategoryManager cm = new CategoryManager(new EfCategoryDal());//Category çağırabilmem için nesne üretmem gerekir.
+        WriterManager wm = new WriterManager(new EfWriterDal());
 
         // GET: Heading
         public ActionResult Index()
@@ -31,7 +32,15 @@ namespace MvcProject.Controllers
                                                       Text=x.CategoryName,
                                                       Value=x.CategoryID.ToString()
                                                   }).ToList();
-            ViewBag.vlc = valuecategory;
+
+            List<SelectListItem> valuewriter = (from x in wm.GetList()
+                                                  select new SelectListItem
+                                                  {
+                                                      Text = x.WriterName+" "+ x.WriterSurname,
+                                                      Value = x.WriterID.ToString()
+                                                  }).ToList();
+            ViewBag.vlc = valuecategory; //vlc : sondaki c category için yazılmış bir c harfi
+            ViewBag.vlw = valuewriter; //vlw: sondaki w writer için yazılmış bir w harfi
             return View();
         }
 
