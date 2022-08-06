@@ -13,6 +13,8 @@ namespace MvcProject.Controllers
     {
 
         HeadingManager hm = new HeadingManager(new EfHeadingDal()); //hm adından bir nesne tanımladık.
+        CategoryManager cm = new CategoryManager(new EfCategoryDal());//Category çağırabilmem için nesne üretmem gerekir.
+
         // GET: Heading
         public ActionResult Index()
         {
@@ -23,7 +25,13 @@ namespace MvcProject.Controllers
         [HttpGet]
         public ActionResult AddHeading()
         {
-            
+            List<SelectListItem> valuecategory = (from x in cm.GetList()
+                                                  select new SelectListItem
+                                                  { 
+                                                      Text=x.CategoryName,
+                                                      Value=x.CategoryID.ToString()
+                                                  }).ToList();
+            ViewBag.vlc = valuecategory;
             return View();
         }
 
