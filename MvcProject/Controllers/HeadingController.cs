@@ -51,5 +51,10 @@ namespace MvcProject.Controllers
             hm.HeadingAdd(p);
             return RedirectToAction("Index");
         }
+
+        public ActionResult ContentByHeading() //Başlığın içeriği şeklinde düşünebiliriz.
+        {
+            return View();
+        }
     }
 }
