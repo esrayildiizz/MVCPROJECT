@@ -13,5 +13,10 @@ namespace MvcProject.Controllers
         {
             return View();
         }
+
+        public ActionResult ContentByHeading() //Başlığın içeriği şeklinde düşünebiliriz.
+        {
+            return View();
+        }
     }
 }
