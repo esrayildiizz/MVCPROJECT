@@ -13,7 +13,10 @@ namespace BusinessLayer.Concrete
     {
         IContentDal _contentDal;
 
-       
+        public ContentManager(IContentDal contentDal)
+        {
+            _contentDal = contentDal;
+        }
 
         public void ContentAdd(Content content)
         {
