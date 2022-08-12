@@ -20,9 +20,10 @@ namespace MvcProject.Controllers
             return View();
         }
 
-        public ActionResult ContentByHeading() //Başlığın içeriği şeklinde düşünebiliriz.
+        public ActionResult ContentByHeading(int id) //Başlığın içeriği şeklinde düşünebiliriz.
         {
-            return View();
+            var contentvalues = cm.GetListByHeadingID(id);
+            return View(contentvalues);
         }
     }
 }
