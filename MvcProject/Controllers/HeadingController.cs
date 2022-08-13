@@ -52,6 +52,9 @@ namespace MvcProject.Controllers
             return RedirectToAction("Index");
         }
 
-       
+       public ActionResult EditHeading(int id)
+        {
+            return View();
+        }
     }
 }
