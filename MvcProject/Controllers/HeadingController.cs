@@ -53,7 +53,7 @@ namespace MvcProject.Controllers
         }
 
 
-        [HttpGet]
+       [HttpGet]
        public ActionResult EditHeading(int id)
         {
             List<SelectListItem> valuecategory = (from x in cm.GetList()
