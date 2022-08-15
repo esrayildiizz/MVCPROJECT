@@ -28,17 +28,17 @@ namespace MvcProject.Controllers
         {
             List<SelectListItem> valuecategory = (from x in cm.GetList()
                                                   select new SelectListItem
-                                                  { 
-                                                      Text=x.CategoryName,
-                                                      Value=x.CategoryID.ToString()
+                                                  {
+                                                      Text = x.CategoryName,
+                                                      Value = x.CategoryID.ToString()
                                                   }).ToList();
 
             List<SelectListItem> valuewriter = (from x in wm.GetList()
-                                                  select new SelectListItem
-                                                  {
-                                                      Text = x.WriterName+" "+ x.WriterSurname,
-                                                      Value = x.WriterID.ToString()
-                                                  }).ToList();
+                                                select new SelectListItem
+                                                {
+                                                    Text = x.WriterName + " " + x.WriterSurname,
+                                                    Value = x.WriterID.ToString()
+                                                }).ToList();
             ViewBag.vlc = valuecategory; //vlc : sondaki c category için yazılmış bir c harfi
             ViewBag.vlw = valuewriter; //vlw: sondaki w writer için yazılmış bir w harfi
             return View();
@@ -47,14 +47,14 @@ namespace MvcProject.Controllers
         [HttpPost]
         public ActionResult AddHeading(Heading p)
         {
-            p.HeadingDate = DateTime.Parse( DateTime.Now.ToShortDateString());
+            p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             hm.HeadingAdd(p);
             return RedirectToAction("Index");
         }
 
 
-       [HttpGet]
-       public ActionResult EditHeading(int id)
+        [HttpGet]
+        public ActionResult EditHeading(int id)
         {
             List<SelectListItem> valuecategory = (from x in cm.GetList()
                                                   select new SelectListItem
@@ -65,6 +65,13 @@ namespace MvcProject.Controllers
             ViewBag.vlc = valuecategory;
             var HeadingValue = hm.GetByID(id);
             return View(HeadingValue);
+        }
+
+        [HttpPost]
+        public ActionResult EditHeading(Heading p)
+        {
+            hm.HeadingUpdate(p);
+            return RedirectToAction("Index");
         }
     }
 }
