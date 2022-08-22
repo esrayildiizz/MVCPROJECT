@@ -16,7 +16,8 @@ namespace MvcProject.Controllers
         // GET: About
         public ActionResult Index()
         {
-            return View();
+            var aboutvalues = abm.GetList();
+            return View(aboutvalues);
         }
 
         [HttpGet]
@@ -29,7 +30,7 @@ namespace MvcProject.Controllers
         public ActionResult AddAbout(About p )
         {
             abm.AboutAdd(p);
-            return View();
+            return RedirectToAction("Index");
         }
     }
 }
