@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules;
+using DataAccessLayer.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +11,14 @@ namespace MvcProject.Controllers
 {
     public class ContactController : Controller
     {
+        ContactManager ctm = new ContactManager(new EfContactDal());
+        ContactValidator cv = new ContactValidator();
+
         // GET: Contact
         public ActionResult Index()
         {
-            return View();
+            var contactvalues = ctm.GetList();
+            return View(contactvalues);
         }
     }
 }
