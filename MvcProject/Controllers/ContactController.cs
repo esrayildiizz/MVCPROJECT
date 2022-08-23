@@ -26,5 +26,11 @@ namespace MvcProject.Controllers
             var contactvalues = ctm.GetByID(id);
             return View(contactvalues);
         }
+
+        public PartialViewResult MessageListMenu()
+        {
+            return PartialView();
+        }
+
     }
 }
