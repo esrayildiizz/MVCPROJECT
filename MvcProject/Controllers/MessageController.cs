@@ -13,11 +13,13 @@ namespace MvcProject.Controllers
         MessageManager mm = new MessageManager(new EfMessageDal());
 
         // GET: Message
+
         public ActionResult Inbox()
         {
             var messagelist = mm.GetListInbox();
             return View(messagelist);
         }
+
 
         public ActionResult Sendbox()
         {
