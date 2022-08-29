@@ -21,7 +21,7 @@ namespace EntityLayer.Concrete
         [StringLength(100)] //Karakter uzunluğu belirleme.
         public string Subject { get; set; }
 
-        public string MessageContact { get; set; }
+        public string MessageContent { get; set; }
 
         public DateTime MessageDate { get; set; }
     }
