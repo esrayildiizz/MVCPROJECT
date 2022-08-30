@@ -12,6 +12,7 @@ namespace MvcProject.Controllers
     public class MessageController : Controller
     {
         MessageManager mm = new MessageManager(new EfMessageDal());
+        ContactManager ctm = new ContactManager(new EfContactDal());
 
         // GET: Message
 
@@ -26,6 +27,12 @@ namespace MvcProject.Controllers
         {
             var messagelist = mm.GetListSendbox();
             return View(messagelist);
+        }
+
+        public ActionResult GetInBoxMessageDetails(int id)
+        {
+            var values = ctm.GetByID(id);
+            return View(values);
         }
 
         [HttpGet]
