@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EntityLayer.Concrete
 {
-     public class Content
+    public class Content
     {
         [Key] //Id için birincil anahtar eklendi.
         public int ContentID { get; set; }
@@ -25,9 +21,5 @@ namespace EntityLayer.Concrete
 
         public int? WriterID { get; set; }
         public virtual Writer Writer { get; set; }
-        
-
-        
-
     }
 }
