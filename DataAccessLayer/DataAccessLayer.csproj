@@ -60,7 +60,6 @@
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
-    <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
     <Compile Include="EntityFramework\EfAboutDal.cs" />
     <Compile Include="EntityFramework\EfCategoryDal.cs" />
@@ -97,6 +96,10 @@
     <Compile Include="Migrations\202208230840496_mig_add_message.designer.cs">
       <DependentUpon>202208230840496_mig_add_message.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202208302039496_30082022.cs" />
+    <Compile Include="Migrations\202208302039496_30082022.designer.cs">
+      <DependentUpon>202208302039496_30082022.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -131,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202208230840496_mig_add_message.resx">
       <DependentUpon>202208230840496_mig_add_message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202208302039496_30082022.resx">
+      <DependentUpon>202208302039496_30082022.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
