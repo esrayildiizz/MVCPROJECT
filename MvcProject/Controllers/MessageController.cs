@@ -2,6 +2,7 @@
 using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -52,8 +53,21 @@ namespace MvcProject.Controllers
         [HttpPost]
         public ActionResult NewMessage(Message p)
         {
-            
+            ValidationResult results = messagevalidator.Validate(p);
+            if (results.IsValid)
+            {
+                mm.MessageAdd(p);
+                return RedirectToAction("Sendbox");
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
             return View();
+            
         }
     }
 }
