@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
@@ -13,6 +14,7 @@ namespace MvcProject.Controllers
     {
         MessageManager mm = new MessageManager(new EfMessageDal());
         ContactManager ctm = new ContactManager(new EfContactDal());
+        MessageValidator messagevalidator = new MessageValidator();
 
         // GET: Message
 
@@ -50,6 +52,7 @@ namespace MvcProject.Controllers
         [HttpPost]
         public ActionResult NewMessage(Message p)
         {
+            
             return View();
         }
     }
