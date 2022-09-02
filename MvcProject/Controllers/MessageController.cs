@@ -56,6 +56,7 @@ namespace MvcProject.Controllers
             ValidationResult results = messagevalidator.Validate(p);
             if (results.IsValid)
             {
+                p.MessageDate = DateTime.Parse(DateTime.Now.ToShortDateString());
                 mm.MessageAdd(p);
                 return RedirectToAction("Sendbox");
             }
