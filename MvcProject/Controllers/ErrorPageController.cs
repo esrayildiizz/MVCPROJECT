@@ -15,5 +15,6 @@ namespace MvcProject.Controllers
             Response.TrySkipIisCustomErrors = true;
             return View();
         }
+
     }
 }
