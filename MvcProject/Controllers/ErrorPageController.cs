@@ -17,7 +17,7 @@ namespace MvcProject.Controllers
         }
         public ActionResult Page404()
         {
-            Response.StatusCode = 403;
+            Response.StatusCode = 404;
             Response.TrySkipIisCustomErrors = true;
             return View();
         }
