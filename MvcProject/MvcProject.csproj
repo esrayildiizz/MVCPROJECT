@@ -144,6 +144,7 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HeadingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
@@ -316,6 +317,8 @@
     <Content Include="AdminLTE-3.0.4\docs\_layouts\home.html" />
     <Content Include="AdminLTE-3.0.4\docs\_layouts\page.html" />
     <Content Include="AdminLTE-3.0.4\docs\_layouts\post.html" />
+    <Content Include="AdminLTE-3.0.4\images\avenue-815297_960_720.jpg" />
+    <Content Include="AdminLTE-3.0.4\images\road-1072823_960_720.jpg" />
     <Content Include="AdminLTE-3.0.4\index.html" />
     <Content Include="AdminLTE-3.0.4\index2.html" />
     <Content Include="AdminLTE-3.0.4\index3.html" />
@@ -2258,6 +2261,9 @@
     <Content Include="AdminLTE-3.0.4\plugins\sweetalert2-theme-bootstrap-4\bootstrap-4.scss" />
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.js.map" />
     <Content Include="AdminLTE-3.0.4\README.md" />
+    <Content Include="AdminLTE-3.0.4\images\fantasy-2049567_960_720.webp" />
+    <Content Include="AdminLTE-3.0.4\images\flowers-276014_960_720.webp" />
+    <Content Include="AdminLTE-3.0.4\images\tree-736885_960_720.webp" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2312,6 +2318,7 @@
     <Content Include="Views\Message\GetInBoxMessageDetails.cshtml" />
     <Content Include="Views\Message\GetSendBoxMessageDetails.cshtml" />
     <Content Include="Views\ErrorPage\Page404.cshtml" />
+    <Content Include="Views\Gallery\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
