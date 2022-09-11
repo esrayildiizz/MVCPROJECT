@@ -2,13 +2,15 @@
 @model List<Message>
 
 @{
-    ViewBag.Title = "Inbox";
+    ViewBag.Title = "Sendbox";
     Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
 
 <!DOCTYPE html>
 <html>
+
 <body class="hold-transition sidebar-mini">
+
     <!-- Content Wrapper. Contains page content -->
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -29,7 +31,7 @@
             <div class="col-md-9">
                 <div class="card card-primary card-outline">
                     <div class="card-header">
-                        <h3 class="card-title">Gelen Mesajlar</h3>
+                        <h3 class="card-title">Gönderilen Mesajlar</h3>
                         <div class="card-tools">
                             <div class="input-group input-group-sm">
                                 <input type="text" class="form-control" placeholder="Mail kutusunda ara">
@@ -71,6 +73,7 @@
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
+
                                         <tr>
                                             <td>
                                                 <div class="icheck-primary">
@@ -78,13 +81,13 @@
                                                     <label for="check1"></label>
                                                 </div>
                                             </td>
-                                            <td class="mailbox-star"><a href="/Message/GetInBoxMessageDetails/@item.MessageID"><i class="fas fa-star text-warning"></i></a></td>
-                                            <td class="mailbox-name"><a href="/Message/GetInBoxMessageDetails/@item.MessageID">@item.SenderMail</a></td>
+                                            <td class="mailbox-star"><a href="/Message/GetSendBoxMessageDetails/@item.MessageID"><i class="fas fa-star text-warning"></i></a></td>
+                                            <td class="mailbox-name"><a href="/Message/GetSendBoxMessageDetails/@item.MessageID">@item.ReceiverMail</a></td>
                                             <td class="mailbox-subject">
-                                                <b></b> @item.MessageContent.Substring(0, 30)...
+                                                <b>@item.Subject</b> - @item.MessageContent.Substring(0, 30)...
                                             </td>
                                             <td class="mailbox-attachment"></td>
-                                            <td class="mailbox-date">@(((DateTime)item.MessageDate).ToString("dd-MMM-yyyy"))</td>
+                                            <td class="mailbox-date">5 mins ago</td>
                                         </tr>
                                     }
                                 </tbody>
