@@ -12,6 +12,7 @@ namespace MvcProject.Controllers
     public class WriterPanelMessageController : Controller
     {
         MessageManager mm = new MessageManager(new EfMessageDal());
+        ContactManager ctm = new ContactManager(new EfContactDal());
         MessageValidator messagevalidator = new MessageValidator();
 
         // GET: WriterPanelMessage
@@ -31,5 +32,18 @@ namespace MvcProject.Controllers
         {
             return PartialView();
         }
+
+        public ActionResult GetInBoxMessageDetails(int id)
+        {
+            var values = ctm.GetByID(id);
+            return View(values);
+        }
+
+        public ActionResult GetSendBoxMessageDetails(int id)
+        {
+            var values = ctm.GetByID(id);
+            return View(values);
+        }
+
     }
 }
