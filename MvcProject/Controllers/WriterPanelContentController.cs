@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +10,12 @@ namespace MvcProject.Controllers
 {
     public class WriterPanelContentController : Controller
     {
+        ContentManager cm = new ContentManager(new EfContentDal());
         // GET: WriterPanelContent
-        public ActionResult Index()
+        public ActionResult MyContent()
         {
-            return View();
+            var contentvalues = cm.GetListByWriter();
+            return View(contentvalues);
         }
     }
 }
