@@ -9,6 +9,7 @@ using System.Web.Security;
 
 namespace MvcProject.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : Controller
     {
         // GET: Login
@@ -52,7 +53,6 @@ namespace MvcProject.Controllers
             {
                 FormsAuthentication.SetAuthCookie(writeruserinfo.WriterMail, false);
                 Session["WriterMail"] = writeruserinfo.WriterMail;
-
                 return RedirectToAction("MyContent", "WriterPanelContent");
             }
             else
