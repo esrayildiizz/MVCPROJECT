@@ -41,5 +41,10 @@ namespace MvcProject.Controllers
             cm.ContentAdd(p);
             return RedirectToAction("MyContent");
         }
+
+        public ActionResult ToDoList() //yapılıcaklar listesi için 
+        {
+            return View();
+        }
     }
 }
