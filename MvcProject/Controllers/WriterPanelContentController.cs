@@ -25,8 +25,9 @@ namespace MvcProject.Controllers
         }
 
         [HttpGet]
-        public ActionResult AddContent()
+        public ActionResult AddContent(int id)
         {
+            ViewBag.d = id;
             return View();
         }
         [HttpPost]
