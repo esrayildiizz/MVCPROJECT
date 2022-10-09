@@ -61,11 +61,13 @@ namespace MvcProject.Controllers
             }
         }
 
+        //Çıkış yap butonu için eklendi.
         public ActionResult LogOut()
         {
             FormsAuthentication.SignOut();
             Session.Abandon();
             return RedirectToAction("Headings", "Deafult");
         }
+
     }
 }
